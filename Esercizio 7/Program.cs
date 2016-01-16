@@ -19,19 +19,19 @@ namespace Esercizio_7
             // ... The HasValue property is false.
             //
             int? value = null;
-            Console.WriteLine(value.HasValue);
+            Console.WriteLine("1)" + value.HasValue);
             //
             // Assign the nullable integer to a constant integer.
             // ... The HasValue property is now true.
             // ... You can access the Value property as well.
             //
             value = 1;
-            Console.WriteLine(value.HasValue);
-            Console.WriteLine(value.Value);
-            Console.WriteLine(value);
+            Console.WriteLine("2)" + value.HasValue);
+            Console.WriteLine("3)" + value.Value);
+            Console.WriteLine("4)" + value);
             if (value == 1)
             {
-                Console.WriteLine("True");
+                Console.WriteLine("5)" + "True");
             }
             Utility.Ferma();
 
@@ -61,6 +61,21 @@ namespace Esercizio_7
             {
                 System.Console.WriteLine(e.Message);
             }
+
+            Utility.Ferma();
+
+            Utility.Inizia();
+
+
+            /// operatore null coalescing
+            object nullobj = null;
+            object unoobj = 123;
+            var v1 = nullobj ?? 2;
+            var v2 = unoobj ?? 1000;
+
+            Console.WriteLine("v1: " + v1);
+            Console.WriteLine("v1: " + v2);
+
             Utility.Ferma();
 
         }
